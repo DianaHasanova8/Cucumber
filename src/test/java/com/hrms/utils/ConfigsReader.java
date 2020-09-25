@@ -10,6 +10,7 @@ public class ConfigsReader {
 	private static Properties prop;
 
 	/*
+	 * Properties are configuration values managed as key/value pairs.
 	 * prop has all data: browser=Chrome
 	 * url=http://166.62.36.207/Syntax_HRM/symfony/web/index.php/auth/login
 	 * username=Admin password=Syntax@123

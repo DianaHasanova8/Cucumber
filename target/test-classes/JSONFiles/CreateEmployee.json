@@ -1,0 +1,10 @@
+{
+	"employee_id": "07225A",
+	"emp_firstname": "John",
+	"emp_middle_name": "Lewis",
+	"emp_lastname": "Davis",
+	"emp_birthday": "1999-01-01",
+	"emp_gender": "1",
+	"emp_job_title": "Developer",
+	"emp_status": "Self-Employee"
+}

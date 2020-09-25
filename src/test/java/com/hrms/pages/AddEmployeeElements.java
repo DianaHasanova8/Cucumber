@@ -8,6 +8,8 @@ import com.hrms.testbase.BaseClass;
 import com.hrms.utils.CommonMethods;
 
 public class AddEmployeeElements extends CommonMethods{
+	
+
 	@FindBy(id = "menu_pim_viewPimModule")
 	public WebElement PIM;
 

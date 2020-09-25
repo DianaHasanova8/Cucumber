@@ -6,9 +6,9 @@ import com.hrms.pages.LoginPageElements;
 import com.hrms.testbase.BaseClass;
 import com.hrms.utils.CommonMethods;
 
-import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
 
 public class LoginSteps extends CommonMethods {
 	LoginPageElements login;
@@ -31,7 +31,7 @@ public class LoginSteps extends CommonMethods {
 		click(login.submitBtn);
 	}
 
-	@Then("I see successfully logged in")
+	@Then("I am successfully logged in")
 	public void i_am_successfully_logged_in() {
 		System.out.println("I am logged in");
 	}
@@ -49,8 +49,8 @@ public class LoginSteps extends CommonMethods {
 		Assert.assertTrue("Error message is not displayed", error);
 	}
 
-	@Then("I close the browser")
-	public void i_close_the_browser() {
+	@Then("I close browser")
+	public void i_close_browser() {
 	   tearDown();
 	}
 }

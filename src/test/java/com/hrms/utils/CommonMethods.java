@@ -2,8 +2,11 @@ package com.hrms.utils;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.Alert;
@@ -14,11 +17,12 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import com.hrms.testbase.BaseClass;
+import com.hrms.testbase.PageInitializer;
 
-public class CommonMethods extends BaseClass {
+public class CommonMethods extends PageInitializer {
 
 	/**
 	 * This method will accept the alert
@@ -154,23 +158,24 @@ public class CommonMethods extends BaseClass {
 	 * 
 	 * @param fileName
 	 */
-	public static String takeScreenshot(String fileName) {
-		
+	public static byte[] takeScreenshot(String fileName) {
+		TakesScreenshot ts = (TakesScreenshot) driver;
+
+		byte[] picture = ts.getScreenshotAs(OutputType.BYTES);
+
 		Date date = new Date();
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy_MMdd_HHmmss");
 		String timeStamp = sdf.format(date.getTime());
-		
-		TakesScreenshot ts = (TakesScreenshot) driver;
 		File file = ts.getScreenshotAs(OutputType.FILE);
-		String screenshotFile = Constants.SCREENSHOT_FILEPATH+fileName+".png";
-		
+		String scrshotFile = Constants.SCREENSHOT_FILEPATH + fileName + timeStamp + ".png";
 		try {
-			FileUtils.copyFile(file, new File("screenshot/" + fileName + ".png"));
+			FileUtils.copyFile(file, new File(scrshotFile));
 		} catch (IOException e) {
 			System.out.println("Cannot take a screenshot");
 		}
-		return screenshotFile;
+		return picture;
 	}
+
 	/**
 	 * This method will enter text
 	 * 
@@ -242,4 +247,73 @@ public class CommonMethods extends BaseClass {
 //		
 //		return driver;
 //	}
+	/**
+	 * This method will select value from DropDown
+	 * 
+	 * @param element
+	 * @param visibleText
+	 */
+	public static void selectDdValue(WebElement element, String visibleText) {
+		Select select = new Select(element);
+		List<WebElement> options = select.getOptions();
+
+		boolean isFound = false;
+		for (WebElement option : options) {
+			if (option.getText().equals(visibleText)) {
+				select.deselectByVisibleText(visibleText);
+				isFound = true;
+				break;
+			}
+		}
+		if (!isFound) {
+			System.out.println("Value " + visibleText + "was not found in the dropdown");
+		}
+	}
+
+	/**
+	 * This method will select value from Drop Down menu
+	 * 
+	 * @param element
+	 * @param index
+	 */
+	public static void selectDdValue(WebElement element, int index) {
+		Select select = new Select(element);
+		List<WebElement> options = select.getOptions();
+		boolean isFound = false;
+		if (options.size() > index) {
+			select.selectByIndex(index);
+			isFound = true;
+		}
+		if (!isFound) {
+			System.out.println("Values with index " + index + " was not selected");
+
+		}
+	}
+
+	/**
+	 * This method will click on the radio button based on the text
+	 * 
+	 * @param elements
+	 * @param radioText
+	 */
+	public static void clickRadio(List<WebElement> elements, String radioText) {
+		for (WebElement el : elements) {
+			// System.out.println("Test From Radio Button " + el.getText());
+			if (el.getText().equals(radioText)) {
+				el.click();
+				break;
+			}
+		}
+	}
+
+	static String jsonFile;
+
+	public static String readJson(String fileName) {
+		try {
+			jsonFile = new String(Files.readAllBytes(Paths.get(fileName)));
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return jsonFile;
+	}
 }

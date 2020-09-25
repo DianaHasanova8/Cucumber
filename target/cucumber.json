@@ -1,0 +1,518 @@
+[
+  {
+    "line": 3,
+    "elements": [
+      {
+        "line": 5,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 6,
+            "name": "I am logged into HRMS",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 8500,
+              "status": "skipped"
+            },
+            "line": 7,
+            "name": "I navigated to Add Employee Page",
+            "match": {
+              "location": "AddEmployeeSteps.i_navigated_to_Add_Employee_Page()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-05-14T15:55:22.078Z",
+        "before": [
+          {
+            "result": {
+              "duration": 342300,
+              "status": "skipped"
+            },
+            "match": {
+              "location": "Hooks.start(Scenario)"
+            }
+          }
+        ],
+        "line": 10,
+        "name": "Add new Employee",
+        "description": "",
+        "id": "add-employee;add-new-employee",
+        "after": [
+          {
+            "result": {
+              "duration": 3300,
+              "status": "skipped"
+            },
+            "match": {
+              "location": "Hooks.end(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 5100,
+              "status": "skipped"
+            },
+            "line": 11,
+            "name": "I add \"John\", \"S\" and \"Smith\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"John\"",
+                  "offset": 6
+                },
+                {
+                  "val": "\"S\"",
+                  "offset": 14
+                },
+                {
+                  "val": "\"Smith\"",
+                  "offset": 22
+                }
+              ],
+              "location": "AddEmployeeSteps.i_add_and_(String,String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 4000,
+              "status": "skipped"
+            },
+            "line": 12,
+            "name": "I click Save",
+            "match": {
+              "location": "AddEmployeeSteps.i_click_Save()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3700,
+              "status": "skipped"
+            },
+            "line": 13,
+            "name": "I see Employee has been succesfully added",
+            "match": {
+              "location": "AddEmployeeSteps.i_see_Employee_has_been_succesfully_added()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@sprint2"
+          },
+          {
+            "name": "@addemployee"
+          },
+          {
+            "name": "@smoke"
+          }
+        ]
+      },
+      {
+        "line": 5,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 6,
+            "name": "I am logged into HRMS",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3700,
+              "status": "skipped"
+            },
+            "line": 7,
+            "name": "I navigated to Add Employee Page",
+            "match": {
+              "location": "AddEmployeeSteps.i_navigated_to_Add_Employee_Page()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-05-14T15:55:22.085Z",
+        "before": [
+          {
+            "result": {
+              "duration": 4300,
+              "status": "skipped"
+            },
+            "match": {
+              "location": "Hooks.start(Scenario)"
+            }
+          }
+        ],
+        "line": 55,
+        "name": "Add Employee and validate database",
+        "description": "",
+        "id": "add-employee;add-employee-and-validate-database",
+        "after": [
+          {
+            "result": {
+              "duration": 2800,
+              "status": "skipped"
+            },
+            "match": {
+              "location": "Hooks.end(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3200,
+              "status": "skipped"
+            },
+            "line": 56,
+            "name": "I add \"James\", \"John\" and \"Smith\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"James\"",
+                  "offset": 6
+                },
+                {
+                  "val": "\"John\"",
+                  "offset": 15
+                },
+                {
+                  "val": "\"Smith\"",
+                  "offset": 26
+                }
+              ],
+              "location": "AddEmployeeSteps.i_add_and_(String,String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 10700,
+              "status": "skipped"
+            },
+            "line": 57,
+            "name": "I click Save",
+            "match": {
+              "location": "AddEmployeeSteps.i_click_Save()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3500,
+              "status": "skipped"
+            },
+            "line": 58,
+            "name": "I see Employee has been succesfully added",
+            "match": {
+              "location": "AddEmployeeSteps.i_see_Employee_has_been_succesfully_added()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 59,
+            "name": "I collect employee data from database",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 60,
+            "name": "I verify employee data is matched",
+            "match": {},
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@sprint2"
+          },
+          {
+            "name": "@addemployee"
+          },
+          {
+            "name": "@smoke"
+          }
+        ]
+      }
+    ],
+    "name": "Add Employee",
+    "description": "",
+    "id": "add-employee",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/AddEmpUpdated.feature",
+    "tags": [
+      {
+        "name": "@sprint2",
+        "type": "Tag",
+        "location": {
+          "line": 2,
+          "column": 1
+        }
+      },
+      {
+        "name": "@addemployee",
+        "type": "Tag",
+        "location": {
+          "line": 2,
+          "column": 10
+        }
+      }
+    ]
+  },
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2020-05-14T15:55:22.085Z",
+        "before": [
+          {
+            "result": {
+              "duration": 3300,
+              "status": "skipped"
+            },
+            "match": {
+              "location": "Hooks.start(Scenario)"
+            }
+          }
+        ],
+        "line": 27,
+        "name": "Valid login",
+        "description": "",
+        "id": "login;valid-login",
+        "after": [
+          {
+            "result": {
+              "duration": 2500,
+              "status": "skipped"
+            },
+            "match": {
+              "location": "Hooks.end(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3100,
+              "status": "skipped"
+            },
+            "line": 28,
+            "name": "I open browser and navigated to the HRMS",
+            "match": {
+              "location": "LoginSteps.i_open_browser_and_navigated_to_the_HRMS()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3200,
+              "status": "skipped"
+            },
+            "line": 29,
+            "name": "I enter valid username and valid password",
+            "match": {
+              "location": "LoginSteps.i_enter_valid_username_and_valid_password()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 3100,
+              "status": "skipped"
+            },
+            "line": 30,
+            "name": "I click login button",
+            "match": {
+              "location": "LoginSteps.i_click_login_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2900,
+              "status": "skipped"
+            },
+            "line": 31,
+            "name": "I am successfully logged in",
+            "match": {
+              "location": "LoginSteps.i_am_successfully_logged_in()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 3000,
+              "status": "skipped"
+            },
+            "line": 32,
+            "name": "I close browser",
+            "match": {
+              "location": "LoginSteps.i_close_browser()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@sprint1,login"
+          },
+          {
+            "name": "@smoke"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-05-14T15:55:22.086Z",
+        "before": [
+          {
+            "result": {
+              "duration": 5900,
+              "status": "skipped"
+            },
+            "match": {
+              "location": "Hooks.start(Scenario)"
+            }
+          }
+        ],
+        "line": 35,
+        "name": "Invalid Login",
+        "description": "",
+        "id": "login;invalid-login",
+        "after": [
+          {
+            "result": {
+              "duration": 2500,
+              "status": "skipped"
+            },
+            "match": {
+              "location": "Hooks.end(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2900,
+              "status": "skipped"
+            },
+            "line": 36,
+            "name": "I open browser and navigated to the HRMS",
+            "match": {
+              "location": "LoginSteps.i_open_browser_and_navigated_to_the_HRMS()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3100,
+              "status": "skipped"
+            },
+            "line": 37,
+            "name": "I enter valid username and invalid password",
+            "match": {
+              "location": "LoginSteps.i_enter_valid_username_and_invalid_password()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2900,
+              "status": "skipped"
+            },
+            "line": 38,
+            "name": "I click login button",
+            "match": {
+              "location": "LoginSteps.i_click_login_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 4500,
+              "status": "skipped"
+            },
+            "line": 39,
+            "name": "I see error message",
+            "match": {
+              "location": "LoginSteps.i_see_error_message()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 3000,
+              "status": "skipped"
+            },
+            "line": 40,
+            "name": "I close browser",
+            "match": {
+              "location": "LoginSteps.i_close_browser()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@sprint1,login"
+          },
+          {
+            "name": "@smoke"
+          }
+        ]
+      }
+    ],
+    "name": "Login",
+    "description": "",
+    "id": "login",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/login.feature",
+    "tags": [
+      {
+        "name": "@sprint1,login",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]
